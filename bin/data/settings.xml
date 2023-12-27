@@ -1,0 +1,4 @@
+<host>localhost</host>
+<port>12345</port>
+<path>C:/Users/Paul/Documents/coding/of_v0.12.0_vs_release/of_v0.12.0_vs_release/apps/myApps/cvEmotionOsc/bin/data/model/tensorflow_model.pb</path>
+<deviceID>0</deviceID>

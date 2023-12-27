@@ -4,9 +4,11 @@
 void ofApp::setup(){
 	finder.setup("model/haarcascade_frontalface_alt2.xml");
 	//finder.findHaarObjects(img);
-
+	if (!settings.load("settings.xml")) {
+		ofLogError() << "Couldn't load file";
+	}
 	model.modelSetup(true);
-	grabber.setDeviceID(0);
+	grabber.setDeviceID(settings.getValue("deviceID",  0,0));
 	grabber.initGrabber(640, 480);
 	colorImg.allocate(640, 480);	
 	bwImg.allocate(640, 480);
@@ -14,8 +16,15 @@ void ofApp::setup(){
 	ofSetFrameRate(60); // run at 60 fps
 	ofSetVerticalSync(true);
 
+
+
 	// open an outgoing connection to HOST:PORT
-	sender.setup(HOST, PORT);
+	string host = settings.getValue("host", "localhost", 0);
+	//host = "\"" + host + "\"";
+	int port = settings.getValue("port", 12345,0);
+	cout << "host"<< host << endl;
+	cout << "port" << port << endl;
+	sender.setup(host, port);
 
 }
 

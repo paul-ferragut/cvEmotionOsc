@@ -39,3 +39,6 @@
 *.log
 *.tlog
 *.pdb
+*.db-shm
+*.db-wal
+*.opendb

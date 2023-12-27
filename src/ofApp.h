@@ -14,8 +14,8 @@
 /// send port
 #define PORT 12345
 
-const std::string TENSORFLOW_MODEL_PATH = "C:/Users/Paul/Documents/coding/of_v0.12.0_vs_release/of_v0.12.0_vs_release/apps/myApps/cvEmotionOsc/bin/data/model/tensorflow_model.pb";
-//const std::string TENSORFLOW_MODEL_PATH = "../../../model/tensorflow_model.pb";
+//const std::string TENSORFLOW_MODEL_PATH = "C:/Users/Paul/Documents/coding/of_v0.12.0_vs_release/of_v0.12.0_vs_release/apps/myApps/cvEmotionOsc/bin/data/model/tensorflow_model.pb";
+const std::string TENSORFLOW_MODEL_PATH = ".//data//model//tensorflow_model.pb";
 
 
 class ofApp : public ofBaseApp{
