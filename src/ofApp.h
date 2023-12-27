@@ -4,7 +4,19 @@
 #include "ofxCvHaarFinder.h"
 #include "ofxOpenCv.h"
 #include "Model.h"
-const std::string TENSORFLOW_MODEL_PATH = "C:/Users/plesk/Documents/coding/of_v0.11.2_vs2017_release/apps/myApps/cvEmotion/bin/data/model/tensorflow_model.pb";
+#include "ofxGui.h"
+#include "ofxXmlSettings.h"
+#include "ofxOsc.h"
+
+// send host (aka ip address)
+#define HOST "localhost"
+
+/// send port
+#define PORT 12345
+
+const std::string TENSORFLOW_MODEL_PATH = "C:/Users/Paul/Documents/coding/of_v0.12.0_vs_release/of_v0.12.0_vs_release/apps/myApps/cvEmotionOsc/bin/data/model/tensorflow_model.pb";
+//const std::string TENSORFLOW_MODEL_PATH = "../../../model/tensorflow_model.pb";
+
 
 class ofApp : public ofBaseApp{
 
@@ -31,4 +43,10 @@ class ofApp : public ofBaseApp{
 		ofxCvGrayscaleImage bwImg;
 		vector<string>emotion_prediction_name;
 		vector<float>emotion_prediction_val;
+
+		ofxPanel gui;
+		ofxXmlSettings settings;
+
+		ofxOscSender sender;
+
 };

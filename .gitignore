@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+*.vsidx
+*.db
+*.bin
+*.ipch
+.vs/cvEmotionOsc/v17/.suo
+*.recipe
+*.log
+*.tlog
+*.pdb

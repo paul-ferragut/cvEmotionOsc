@@ -10,6 +10,13 @@ void ofApp::setup(){
 	grabber.initGrabber(640, 480);
 	colorImg.allocate(640, 480);	
 	bwImg.allocate(640, 480);
+
+	ofSetFrameRate(60); // run at 60 fps
+	ofSetVerticalSync(true);
+
+	// open an outgoing connection to HOST:PORT
+	sender.setup(HOST, PORT);
+
 }
 
 //--------------------------------------------------------------
@@ -26,11 +33,32 @@ void ofApp::update(){
 		bwImg = colorImg;
 		finder.findHaarObjects(bwImg);
 
+	
+
 		if (finder.blobs.size() > 0) {
+
+			//Find larger blob
+			int largerRect = 0;
+			int prevSize = 0;
+			for (unsigned int i = 0; i < finder.blobs.size(); i++) {
+
+				CvRect rectOF;
+				rectOF.x = finder.blobs[i].boundingRect.x;
+				rectOF.y = finder.blobs[i].boundingRect.y;
+				rectOF.width = finder.blobs[i].boundingRect.width;
+				rectOF.height = finder.blobs[i].boundingRect.height;
+				int sizeR = rectOF.width * rectOF.height;
+				if (prevSize < sizeR) {
+					largerRect = i;
+				}
+				prevSize = sizeR;
+			}
+
 			// Make Prediction
 			vector< cv::Mat> matCv;
 			for (unsigned int i = 0; i < finder.blobs.size(); i++) {
 
+				if (i == largerRect) {
 					CvRect rectOF;
 					rectOF.x = finder.blobs[i].boundingRect.x;
 					rectOF.y = finder.blobs[i].boundingRect.y;
@@ -44,12 +72,23 @@ void ofApp::update(){
 					cv::cvtColor(c, gray_image, cv::COLOR_BGR2GRAY);
 					cv::resize(gray_image, processed_image, cv::Size(48, 48));
 					// Convert image pixels from between 0-255 to 0-1
-					processed_image.convertTo(processed_image, CV_32FC3, 1.f / 255);				
+					processed_image.convertTo(processed_image, CV_32FC3, 1.f / 255);
 					matCv.push_back(processed_image);
-
+				}
 			}
 			emotion_prediction_val= model.predict(matCv);
 			emotion_prediction_name = model.emotionList();
+
+
+
+			for (int i = 0; i < emotion_prediction_val.size(); i++) {
+				//ofDrawBitmapString(model.probS[i], 20, 480 + i * 40);
+			ofxOscMessage m;
+			m.setAddress("/emotion/"+ emotion_prediction_name[i]);
+			m.addFloatArg(emotion_prediction_val[i]);
+			sender.sendMessage(m, false);
+			}
+
 			//vector<string>emotion_prediction = model.predict(matCv);
 			// Add prediction text to the output video frame
 			//for (int i = 0; i < emotion_prediction.size(); i++) {

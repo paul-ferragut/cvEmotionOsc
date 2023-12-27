@@ -1,6 +1,7 @@
 #include <opencv2/opencv.hpp>
 
 #include "Model.h"
+#include "ofMain.h"
 
 Model::Model(const string& model_filename) 
     : network(cv::dnn::readNet(model_filename)), // Load the tensorflow model 
@@ -17,7 +18,7 @@ Model::Model(const string& model_filename)
 
 void Model::modelSetup(bool useCuda)
 {
-
+    
     emotionValues.clear();
     emotionsNames.clear();
     if (useCuda) {
