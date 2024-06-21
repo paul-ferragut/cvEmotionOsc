@@ -1,12 +1,15 @@
 #pragma once
 
+#include "ofxSpout.h"
 #include "ofMain.h"
+
 #include "ofxCvHaarFinder.h"
 #include "ofxOpenCv.h"
 #include "Model.h"
 #include "ofxGui.h"
 #include "ofxXmlSettings.h"
 #include "ofxOsc.h"
+
 
 // send host (aka ip address)
 #define HOST "localhost"
@@ -48,5 +51,7 @@ class ofApp : public ofBaseApp{
 		ofxXmlSettings settings;
 
 		ofxOscSender sender;
+
+		ofxSpout::Sender senderSpout;
 
 };

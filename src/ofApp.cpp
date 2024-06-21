@@ -26,6 +26,8 @@ void ofApp::setup(){
 	cout << "port" << port << endl;
 	sender.setup(host, port);
 
+	senderSpout.init("CamEmotions");
+
 }
 
 //--------------------------------------------------------------
@@ -35,6 +37,8 @@ void ofApp::update(){
 	grabber.update();
 	if (grabber.isFrameNew()) {
 
+		senderSpout.send(grabber.getTexture());
+
 		//get the ofPixels and convert to an ofxCvColorImage
 		auto pixels = grabber.getPixels();
 		colorImg.setFromPixels(pixels);
@@ -42,7 +46,7 @@ void ofApp::update(){
 		bwImg = colorImg;
 		finder.findHaarObjects(bwImg);
 
-	
+		
 
 		if (finder.blobs.size() > 0) {
 
@@ -105,7 +109,7 @@ void ofApp::update(){
 			//}
 		}
 	}
-
+	
 	
 }
 
