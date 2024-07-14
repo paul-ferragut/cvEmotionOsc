@@ -1,17 +1,18 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void ofApp::setup() {
 	finder.setup("model/haarcascade_frontalface_alt2.xml");
 	//finder.findHaarObjects(img);
 	if (!settings.load("settings.xml")) {
 		ofLogError() << "Couldn't load file";
 	}
 	model.modelSetup(true);
-	grabber.setDeviceID(settings.getValue("deviceID",  0,0));
-	grabber.initGrabber(640, 480);
-	colorImg.allocate(640, 480);	
+	//grabber.setDeviceID(settings.getValue("deviceID",  0,0));
+	//grabber.initGrabber(640, 480);
+	colorImg.allocate(640, 480);
 	bwImg.allocate(640, 480);
+	fbo.allocate(640, 480,GL_RGB32F);
 
 	ofSetFrameRate(60); // run at 60 fps
 	ofSetVerticalSync(true);
@@ -21,28 +22,50 @@ void ofApp::setup(){
 	// open an outgoing connection to HOST:PORT
 	string host = settings.getValue("host", "localhost", 0);
 	//host = "\"" + host + "\"";
-	int port = settings.getValue("port", 12345,0);
-	cout << "host"<< host << endl;
+	int port = settings.getValue("port", 12345, 0);
+	cout << "host" << host << endl;
 	cout << "port" << port << endl;
 	sender.setup(host, port);
 
 	senderSpout.init("CamEmotions");
 
-}
+	receiverSpout.init("TDEmo");
+	//texture.allocate(640, 480, OF_IMAGE_COLOR);
+	// Allocate the pixels object with the same size as the texture
 
+	//pixels.allocate(texture.getWidth(), texture.getHeight(), colorImg.getPixels().getPixelFormat());
+
+	// Read the texture into the pixels object
+	//texture.readToPixels(pixels);
+}
 //--------------------------------------------------------------
 void ofApp::update(){
 
 
-	grabber.update();
-	if (grabber.isFrameNew()) {
+	//grabber.update();
 
-		senderSpout.send(grabber.getTexture());
+	receiverSpout.receive(texture);
 
+
+	//texture.readToPixels(pixels);
+	fbo.begin();
+	texture.draw(0, 0);
+	fbo.end();
+
+	//if (grabber.isFrameNew()) {
+
+		//senderSpout.send(grabber.getTexture());
+
+		
 		//get the ofPixels and convert to an ofxCvColorImage
-		auto pixels = grabber.getPixels();
-		colorImg.setFromPixels(pixels);
+	ofPixels pix;
+	fbo.readToPixels(pix);
+
 	
+	//auto pixels =fbo.getTextureReference().getPix// pix;// texture.getPixels();
+		//colorImg.setFromPixels(pix,640,480
+	//auto pixels = imageFromTexture.getPixels();
+	colorImg.setFromPixels(pix);
 		bwImg = colorImg;
 		finder.findHaarObjects(bwImg);
 
@@ -108,7 +131,7 @@ void ofApp::update(){
 			//	cout << emotion_prediction[i] << endl;
 			//}
 		}
-	}
+	//}
 	
 	
 }
@@ -116,7 +139,10 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	ofFill();
-	grabber.draw(0,0);
+	texture.draw(0,0);
+	colorImg.draw(640, 480);
+	bwImg.draw(0, 480);
+	fbo.draw(640, 0);
 	ofNoFill();
 	for (unsigned int i = 0; i < finder.blobs.size(); i++) {
 		ofRectangle cur = finder.blobs[i].boundingRect;

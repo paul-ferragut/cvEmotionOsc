@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\ofApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\ofApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\ofApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared\\rpcndr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -20,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7FD42DF7-442E-479A-BA76-D0022F99702A}|cvEmotionOsc.vcxproj|solutionrelative:src\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,7 +41,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "rpcndr.h",
               "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared\\rpcndr.h",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared\\rpcndr.h",
@@ -66,32 +66,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ofApp.h",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.h",
               "RelativeDocumentMoniker": "src\\ofApp.h",
               "ToolTip": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.h",
               "RelativeToolTip": "src\\ofApp.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAQAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwCsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2023-12-22T09:57:18.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ofApp.cpp",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.cpp",
               "RelativeDocumentMoniker": "src\\ofApp.cpp",
               "ToolTip": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\ofApp.cpp",
               "RelativeToolTip": "src\\ofApp.cpp",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAJMAAAAgAAAA",
+              "ViewState": "AQIAALIAAAAAAAAAAAAAAEcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2023-12-22T11:48:26.377Z"
+              "WhenOpened": "2023-12-22T11:48:26.377Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Model.h",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\Model.h",
               "RelativeDocumentMoniker": "src\\Model.h",
@@ -99,11 +100,12 @@
               "RelativeToolTip": "src\\Model.h",
               "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2023-12-22T11:45:18.772Z"
+              "WhenOpened": "2023-12-22T11:45:18.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Model.cpp",
               "DocumentMoniker": "C:\\Users\\Paul\\Documents\\Coding\\of_v0.12.0_vs_release\\of_v0.12.0_vs_release\\apps\\myApps\\cvEmotionOsc\\src\\Model.cpp",
               "RelativeDocumentMoniker": "src\\Model.cpp",

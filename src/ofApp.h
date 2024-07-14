@@ -53,5 +53,9 @@ class ofApp : public ofBaseApp{
 		ofxOscSender sender;
 
 		ofxSpout::Sender senderSpout;
+		ofxSpout::Receiver receiverSpout;
+		ofTexture texture;
+		ofFbo fbo;
+		//ofPixels pixels;
 
 };
